@@ -1,0 +1,12 @@
+{
+    "name": "pplg2/buku-tamu",
+    "description": "Buku Tamu X PPLG 2",
+    "type": "project",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "project\\model\\": "model/",
+            "project\\repository\\": "controller/repository"
+        }
+    }
+}
