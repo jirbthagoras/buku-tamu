@@ -1,3 +1,12 @@
+<?php
+
+require_once "../../vendor/autoload.php";
+require_once "../../helper/connection.php";
+
+$db = getConnection();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,19 +24,22 @@
         <nav class="flex items-center justify-center">
             <!-- Navigation Links -->
             <div class="flex space-x-4 md:space-x-14">
-                <a href="./Daftar.html" 
+                <a href="Daftar.php"
                 class="font-jakarta font-bold text-white hover:text-gray-700">DAFTAR</a>
-                <a href="./Informasi.html" 
+                <a href="Informasi.php"
                 class="font-jakarta font-bold text-white hover:text-gray-700">INFORMASI</a>
-                <a href="./rundown.html" 
+                <a href="rundown.php"
                 class="font-jakarta font-bold text-white hover:text-gray-700">RUNDOWN</a>
-                <a href="#" 
+                <a href="Data.php"
                 class="font-jakarta font-bold  text-white hover:text-gray-700">DATA</a>
             </div>
         </nav>
     </div>
 </div>
 
+
+
+<form action="/Buku-tamu/view/src/Daftar.php" method="post">
     <div class=" w-full h-screen flex items-center justify-center">
         <div class="w-full max-w-xs lg:max-w-sm absolute">
             
@@ -37,27 +49,37 @@
 
                     <!-- <label for="username" class="block appearance-none text-yellow-400 text-sm font-bold mb-2">username</label> -->
 
-                    <input type="text" placeholder="Nama..."
+
+                    <input type="text" placeholder="Nama..." name="nama"
                     class="shadow border-2 bg-gray-100 focus:bg-white focus:border-[#fbbf80] rounded-2xl w-full mb-5 py-2 px-3 text-gray-700 leading-tight focus:outline-none">
 
                     <!-- <label for="username" class="block appearance-none text-yellow-400 text-sm font-bold mb-2">username</label> -->
 
-                    <input type="text" placeholder="Kelas..."
+                    <input type="text" placeholder="Kelas..." name="kelas"
                     class="shadow border-2 bg-gray-100 focus:bg-white focus:border-[#fbbf80] rounded-2xl w-full mb-5 py-2 px-3 text-gray-700 leading-tight focus:outline-none">
 
                     <!-- <label for="username" class="block appearance-none text-yellow-400 text-sm font-bold mb-2">username</label> -->
 
-                    <input type="text" placeholder="Password..."
+                    <input type="password" placeholder="Password..." name="password"
                     class="shadow border-2 bg-gray-100 focus:bg-white focus:border-[#fbbf80] rounded-2xl w-full mb-5 py-2 px-3 text-gray-700 leading-tight focus:outline-none">
-                    
                 </div>
                 <div class="flex items-center justify-center">
-                    <button class="w-full bg-green-600 rounded-2xl hover:bg-green-900 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline">Submit</button>
+                    <input type="submit" placeholder="SUBMIT" class="w-full bg-green-600 rounded-2xl hover:bg-green-900 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline">
                 </div>
 
             </div>
         </div>
     </div>
+</form>
+
+<?php
+
+$userService = new \project\service\userService();
+
+$userService->submit($_POST["nama"], $_POST["kelas"], $_POST["password"], $db);
+
+$db = null;
+?>
 
 
 </body>

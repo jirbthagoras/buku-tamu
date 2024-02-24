@@ -3,7 +3,7 @@
 namespace project\model;
 
 class kode {
-    public function __construct(private int $id, private string $kode)
+    public function __construct(private int $id, private string $kode, private int $usages)
     {
     }
 
@@ -26,6 +26,18 @@ class kode {
     {
         $this->kode = $kode;
     }
+
+    public function getUsages(): int
+    {
+        return $this->usages;
+    }
+
+    public function setUsages(int $usages): void
+    {
+        $this->usages = $usages;
+    }
+
+
 
 
 }

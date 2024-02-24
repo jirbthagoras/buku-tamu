@@ -15,13 +15,13 @@
         <nav class="flex items-center justify-center">
             <!-- Navigation Links -->
             <div class="flex space-x-4 md:space-x-14">
-                <a href="./Daftar.html" 
+                <a href="Daftar.php"
                 class="font-jakarta font-bold text-white hover:text-gray-700">DAFTAR</a>
-                <a href="./Informasi.html" 
+                <a href="Informasi.php"
                 class="font-jakarta font-bold text-white hover:text-gray-700">INFORMASI</a>
-                <a href="./rundown.html" 
+                <a href="rundown.php"
                 class="font-jakarta font-bold text-white hover:text-gray-700">RUNDOWN</a>
-                <a href="#" 
+                <a href="Data.php"
                 class="font-jakarta font-bold  text-white hover:text-gray-700">DATA</a>
             </div>
         </nav>

@@ -6,7 +6,8 @@
     "autoload": {
         "psr-4": {
             "project\\model\\": "model/",
-            "project\\repository\\": "controller/repository"
+            "project\\repository\\": "controller/repository/",
+            "project\\service\\": "controller/service/"
         }
     }
 }

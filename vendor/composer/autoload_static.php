@@ -9,12 +9,17 @@ class ComposerStaticInita64988c0b117fa5d64110316fc58c90f
     public static $prefixLengthsPsr4 = array (
         'p' => 
         array (
+            'project\\service\\' => 16,
             'project\\repository\\' => 19,
             'project\\model\\' => 14,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'project\\service\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/controller/service',
+        ),
         'project\\repository\\' => 
         array (
             0 => __DIR__ . '/../..' . '/controller/repository',
