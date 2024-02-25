@@ -20,22 +20,41 @@ class userService
         $kodeRepository = new kodeRepository();
         $result = $kodeRepository->query($password, $db);
 
+
         if ($_SERVER["REQUEST_METHOD"] == "POST")
         {
 
-            if ($password == $result['kode'] && $nama != "" && $kelas != "")
-            {
+            try {
 
-                $userRepository = new userRepository();
-                $userRepository->submit($nama, $kelas, $db);
-                $kodeRepository->minus($password, $db);
+                if ($password == $result['kode'] && $nama != "" && $kelas != "") {
 
-                exit();
+                    $userRepository = new userRepository();
+                    $userRepository->submit($nama, $kelas, $db);
+                    $kodeRepository->minus($password, $db);
 
-            } elseif ($result['usages'] <= 0) {
-                echo "<script>alert('PASSWORD INVALID: PASSWORD SALAH ATAU MUNGKIN PASSWORD EXPIRED')</script>" . PHP_EOL;
-            } else {
-                echo "<script>alert('INPUT INVALID: INPUT INVALID')</script>" . PHP_EOL;
+                    header("Location:/Buku-tamu/view/src/Data.php");
+
+                    exit();
+
+                } elseif ($result['usages'] <= 0) {
+
+                    echo "<script>alert('PASSWORD INVALID: PASSWORD SALAH ATAU MUNGKIN PASSWORD EXPIRED')</script>" . PHP_EOL;
+
+                } else {
+
+                    echo "<script>alert('INPUT INVALID: INPUT INVALID')</script>" . PHP_EOL;
+
+                }
+
+
+            } catch(\PDOException $exception) {
+
+                echo "<script>alert('INPUT INVALID: NAMA SUDAH TERDAFTAR')</script>" . PHP_EOL;
+
+//                header("Location:/Buku-tamu/view/src/Daftar.php");
+
+//                exit();
+
             }
 
 

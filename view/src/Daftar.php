@@ -5,6 +5,15 @@ require_once "../../helper/connection.php";
 
 $db = getConnection();
 
+$userService = new \project\service\userService();
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $userService->submit($_POST["nama"], $_POST["kelas"], $_POST["password"], $db);
+
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -39,7 +48,7 @@ $db = getConnection();
 
 
 
-<form action="/view/src/Daftar.php" method="post">
+<form action="/Buku-tamu/view/src/Daftar.php" method="post">
     <div class=" w-full h-screen flex items-center justify-center">
         <div class="w-full max-w-xs lg:max-w-sm absolute">
             
@@ -73,10 +82,6 @@ $db = getConnection();
 </form>
 
 <?php
-
-$userService = new \project\service\userService();
-
-$userService->submit($_POST["nama"], $_POST["kelas"], $_POST["password"], $db);
 
 $db = null;
 ?>

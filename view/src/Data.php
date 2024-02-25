@@ -56,7 +56,7 @@ $number = 1;
                     <th>Kelas</th>
                     <th>Tanggal</th>
                     </thead>
-                    <?php foreach($result as $set): ?>
+<!--                    --><?php //foreach($result as $set): ?>
                         <tbody>
                         <tr>
 <!--                            <td>--><?php //echo $number++ ?><!--</td>-->
@@ -69,7 +69,7 @@ $number = 1;
                             <td>TEST</td>
                         </tr>
                         </tbody>
-                    <?php endforeach; ?>
+<!--                    --><?php //endforeach; ?>
                 </table>
 
             </div>
