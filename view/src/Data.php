@@ -49,28 +49,47 @@ $number = 1;
             <div class="mb-4 ">
                 <h1 class="text-center  text-white text-3xl font-extrabold font-jakarta  mb-8">DISPLAY</h1>
 
-                <table border = "1">
-                    <thead>
-                    <th>Nomor</th>
-                    <th>Nama</th>
-                    <th>Kelas</th>
-                    <th>Tanggal</th>
+                <div style="overflow-x: auto">
+                <table class="px-4 py-4 text-sm bg-[#7F5539] mr-5 ml-5">
+                    <thead border="1" class="text-white px-3 py-3 text-2xl">
+                    <th border="1" class="px-4 py-4">Nomor</th>
+                    <th border="1" class="px-4 py-4">Nama</th>
+                    <th border="1" class="px-4 py-4">Kelas</th>
+                    <th border="1" class="px-4 py-4">Tanggal</th>
                     </thead>
-<!--                    --><?php //foreach($result as $set): ?>
+                    <?php foreach($result as $set): ?>
                         <tbody>
-                        <tr>
-<!--                            <td>--><?php //echo $number++ ?><!--</td>-->
-<!--                            <td>--><?php //echo $set["nama"];?><!--</td>-->
-<!--                            <td>--><?php //echo $set["kelas"];?><!--</td>-->
-<!--                            <td>--><?php //echo $set["tanggal"];?><!--</td>-->
-                            <td>TEST</td>
-                            <td>TEST</td>
-                            <td>TEST</td>
-                            <td>TEST</td>
+                            <?php if ($number%2==0): ?>
+                        <tr class="border-4 px-4 py-4 text-white justify-center items-center bg-[#B29F8E]">
+
+                            <td class="border-2 px-4 py-4 justify-center items-center"><?php echo $number++ ?></td>
+                            <td class="border-2 px-4 py-4"><?php echo $set["nama"];?></td>
+                            <td class="border-2 px-4 py-4"><?php echo $set["kelas"];?></td>
+                            <td class="border-2 px-4 py-4"><?php echo $set["tanggal"];?></td>
+<!--                            <td border="1" class="border-2 px-4 py-4">TEST</td>-->
+<!--                            <td border="1" class="border-2 px-4 py-4">TEST</td>-->
+<!--                            <td border="1" class="border-2 px-4 py-4">TEST</td>-->
+<!--                            <td border="1" class="border-2 px-4 py-4">TEST</td>-->
                         </tr>
+                            <?php else:?>
+
+                                <tr class="border-4 px-4 py-4 text-black justify-center items-center bg-[#DDB892]">
+
+                                    <td class="border-2 px-4 py-4"><?php echo $number++ ?></td>
+                                    <td class="border-2 px-4 py-4"><?php echo $set["nama"];?></td>
+                                    <td class="border-2 px-4 py-4"><?php echo $set["kelas"];?></td>
+                                    <td class="border-2 px-4 py-4"><?php echo $set["tanggal"];?></td>
+                                    <!--                            <td border="1" class="border-2 px-4 py-4">TEST</td>-->
+                                    <!--                            <td border="1" class="border-2 px-4 py-4">TEST</td>-->
+                                    <!--                            <td border="1" class="border-2 px-4 py-4">TEST</td>-->
+                                    <!--                            <td border="1" class="border-2 px-4 py-4">TEST</td>-->
+                                </tr>
+
+                            <?php endif; ?>
                         </tbody>
-<!--                    --><?php //endforeach; ?>
+                    <?php endforeach; ?>
                 </table>
+                </div>
 
             </div>
         </div>

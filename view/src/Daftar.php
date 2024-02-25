@@ -64,8 +64,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     <!-- <label for="username" class="block appearance-none text-yellow-400 text-sm font-bold mb-2">username</label> -->
 
-                    <input type="text" placeholder="Kelas..." name="kelas"
+                    <select type="" placeholder="Kelas..." name="kelas"
                     class="shadow border-2 bg-gray-100 focus:bg-white focus:border-[#fbbf80] rounded-2xl w-full mb-5 py-2 px-3 text-gray-700 leading-tight focus:outline-none">
+                        <option value="X DKV 1">X DKV 1</option>
+                        <option value="X DKV 2">X DKV 2</option>
+                        <option value="X DKV 3">X DKV 3</option>
+                        <option value="X TJKT 1">X TJKT 1</option>
+                        <option value="X TJKT 2">X TJKT 2</option>
+                    </select>
 
                     <!-- <label for="username" class="block appearance-none text-yellow-400 text-sm font-bold mb-2">username</label> -->
 
