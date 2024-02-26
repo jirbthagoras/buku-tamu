@@ -2,6 +2,11 @@
 
 require_once "../../vendor/autoload.php";
 require_once "../../helper/connection.php";
+require_once "../../helper/setCookie.php";
+
+session_start();
+
+if (isset($_SESSION['login']))
 
 $db = getConnection();
 
@@ -48,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-<form action="/Buku-tamu/view/src/Daftar.php" method="post">
+<form action="/view/src/Daftar.php" method="post">
     <div class=" w-full h-screen flex items-center justify-center">
         <div class="w-full max-w-xs lg:max-w-sm absolute">
             

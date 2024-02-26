@@ -32,7 +32,9 @@ class userService
                     $userRepository->submit($nama, $kelas, $db);
                     $kodeRepository->minus($password, $db);
 
-                    header("Location:/Buku-tamu/view/src/Data.php");
+                    $_SESSION['login'] = true;
+
+                    header("Location:/view/src/Data.php");
 
                     exit();
 
@@ -59,13 +61,6 @@ class userService
 
 
         }
-
-
-
-    }
-
-    public function display($result)
-    {
 
 
 

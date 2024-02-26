@@ -46,7 +46,7 @@ $number = 1;
     <div class="w-full  max-w-xs lg:max-w-3xl absolute">
 
         <div class="bg-[#DDB892]  border-2 shadow-md rounded-2xl px-9 pt-8 mt-60 lg:mt-36 mb-10 pb-8">
-            <div class="mb-4 ">
+              <div class="mb-4 ">
                 <h1 class="text-center  text-white text-3xl font-extrabold font-jakarta  mb-8">DISPLAY</h1>
 
                 <div style="overflow-x: auto">
