@@ -35,25 +35,28 @@
                 <div class="mb-4">
                     <h1 class=" text-white text-3xl lg:text-4xl font-bold  font-jakarta">RUNDOWN ACARA</h1>
                     <div class="mt-5 px-4 py-5 bg-[#B29F8E] rounded-2xl">
-                        <h1 class="text-2xl font-jakarta text-white ">Pembukaan Acara <span  class="block text-base">07:00-07:30</span></h1>
+                        <h1 class="text-2xl font-jakarta text-white ">Pembukaan Acara<span class="block text-base">07:00-07:30</span></h1>
                     </div>
                     <div class="mt-5 px-4 py-5 bg-[#B29F8E] rounded-2xl">
-                        <h1 class="text-2xl font-jakarta text-white ">Siraman <span  class="block text-base">07:30-07:45</span></h1>
+                        <h1 class="text-2xl font-jakarta text-white ">Siraman<span class="block text-base">07:30-07:45</span></h1>
                     </div>
                     <div class="mt-5 px-4 py-5 bg-[#B29F8E] rounded-2xl">
-                        <h1 class="text-2xl font-jakarta text-white ">Midodareni <span  class="block text-base">07:45-07:55</span></h1>
+                        <h1 class="text-2xl font-jakarta text-white ">Midodareni<span class="block text-base">07:45-07:55</span></h1>
                     </div>
                     <div class="mt-5 px-4 py-5 bg-[#B29F8E] rounded-2xl">
-                        <h1 class="text-2xl font-jakarta text-white ">Makan <span  class="block text-base">08:00-08:30</span></h1>
+                        <h1 class="text-2xl font-jakarta text-white ">Makan<span class="block text-base">08:00-08:30</span></h1>
                     </div>
                     <div class="mt-5 px-4 py-5 bg-[#B29F8E] rounded-2xl">
-                        <h1 class="text-2xl font-jakarta text-white ">Temu Manten <span  class="block text-base">08:40-09:00</span></h1>
+                        <h1 class="text-2xl font-jakarta text-white ">Temu Manten<span class="block text-base">08:40-09:00</span></h1>
                     </div>
                     <div class="mt-5 px-4 py-5 bg-[#B29F8E] rounded-2xl">
-                        <h1 class="text-2xl font-jakarta text-white">Bobot Timbang <span  class="block text-base">09:00-09:10</span></h1>
+                        <h1 class="text-2xl font-jakarta text-white">Bobot Timbang<span class="block text-base">09:00-09:10</span></h1>
                     </div>
                     <div class="mt-5 px-4 py-5 bg-[#B29F8E] rounded-2xl">
-                        <h1 class="text-2xl font-jakarta text-white ">Nanem Jero <span  class="block text-base">09:10-09:15</span></h1>
+                        <h1 class="text-2xl font-jakarta text-white ">Nanem Jero<span class="block text-base">09:10-09:15</span></h1>
+                    </div>
+                    <div class="mt-5 px-4 py-5 bg-[#B29F8E] rounded-2xl">
+                        <h1 class="text-2xl font-jakarta text-white ">Selesai<span class="block text-base">09:10-09:15</span></h1>
                     </div>
                 </div>
             </div>
