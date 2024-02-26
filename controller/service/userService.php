@@ -17,6 +17,8 @@ class userService
         htmlspecialchars($kelas);
         htmlspecialchars($password);
 
+        $success = false;
+
         $kodeRepository = new kodeRepository();
         $result = $kodeRepository->query($password, $db);
 
@@ -26,24 +28,28 @@ class userService
 
             try {
 
-                if ($password == $result['kode'] && $nama != "" && $kelas != "") {
+                if (array_key_exists('kode', $result) && array_key_exists('usages', $result)) {
+                    if ($password == $result['kode'] && $nama != "" && $kelas != "") {
 
-                    $userRepository = new userRepository();
-                    $userRepository->submit($nama, $kelas, $db);
-                    $kodeRepository->minus($password, $db);
+                        $userRepository = new userRepository();
+                        $userRepository->submit($nama, $kelas, $db);
+                        $kodeRepository->minus($password, $db);
 
-                    header("Location:/Buku-tamu/view/src/Data.php");
+                        header("Location:/view/src/Data.php");
 
-                    exit();
+                        exit();
 
-                } elseif ($result['usages'] <= 0) {
+                    } elseif ($result['usages'] <= 0) {
 
-                    echo "<script>alert('PASSWORD INVALID: PASSWORD SALAH ATAU MUNGKIN PASSWORD EXPIRED')</script>" . PHP_EOL;
+                        echo "<script>alert('PASSWORD INVALID: PASSWORD SALAH ATAU MUNGKIN PASSWORD EXPIRED')</script>" . PHP_EOL;
 
+                    } else {
+
+                        echo "<script>alert('INPUT INVALID: INPUT INVALID')</script>" . PHP_EOL;
+
+                    }
                 } else {
-
-                    echo "<script>alert('INPUT INVALID: INPUT INVALID')</script>" . PHP_EOL;
-
+                    echo "<script>alert('PASSWORD INVALID: PASSWORD SALAH ATAU MUNGKIN PASSWORD EXPIRED')</script>" . PHP_EOL;
                 }
 
 
