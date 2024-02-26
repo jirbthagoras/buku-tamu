@@ -17,8 +17,6 @@ class userService
         htmlspecialchars($kelas);
         htmlspecialchars($password);
 
-        $success = false;
-
         $kodeRepository = new kodeRepository();
         $result = $kodeRepository->query($password, $db);
 
@@ -56,10 +54,6 @@ class userService
             } catch(\PDOException $exception) {
 
                 echo "<script>alert('INPUT INVALID: NAMA SUDAH TERDAFTAR')</script>" . PHP_EOL;
-
-//                header("Location:/Buku-tamu/view/src/Daftar.php");
-
-//                exit();
 
             }
 
