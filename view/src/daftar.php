@@ -47,9 +47,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <nav class="flex items-center justify-center">
             <!-- Navigation Links -->
             <div class="flex space-x-4 md:space-x-14">
-                <a href="Daftar.php"
+                <a href="daftar.php"
                 class="font-jakarta font-bold text-white hover:text-gray-700">DAFTAR</a>
-                <a href="Informasi.php"
+                <a href="informasi.php"
                 class="font-jakarta font-bold text-white hover:text-gray-700">INFORMASI</a>
                 <a href="rundown.php"
                 class="font-jakarta font-bold text-white hover:text-gray-700">RUNDOWN</a>
@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-<form action="/view/src/Daftar.php" method="post">
+<form action="/view/src/daftar.php" method="post">
     <div class=" w-full h-screen flex items-center justify-center">
         <div class="w-full max-w-xs lg:max-w-sm absolute">
             
