@@ -6,6 +6,7 @@ use project\repository\kodeRepository;
 use project\repository\userRepository;
 
 require_once "../../vendor/autoload.php";
+require_once "../../helper/setCookie.php";
 
 class userService
 {
@@ -26,36 +27,37 @@ class userService
 
             try {
 
-                if ($password == $result['kode'] && $nama != "" && $kelas != "") {
+                if (array_key_exists('kode', $result) && array_key_exists('usages', $result)) {
+                    if ($password == $result['kode'] && $nama != "" && $kelas != "") {
 
-                    $userRepository = new userRepository();
-                    $userRepository->submit($nama, $kelas, $db);
-                    $kodeRepository->minus($password, $db);
+                        $userRepository = new userRepository();
+                        $userRepository->submit($nama, $kelas, $db);
+                        $kodeRepository->minus($password, $db);
 
-                    $_SESSION['login'] = true;
+                        $_SESSION['login'] = true;
 
-                    header("Location:/view/src/Data.php");
+                        cookie("login_state", $_SESSION['login']);
 
-                    exit();
+                        header("Location:/view/src/Data.php");
+                        exit();
 
-                } elseif ($result['usages'] <= 0) {
+                    } elseif ($result['usages'] <= 0) {
 
-                    echo "<script>alert('PASSWORD INVALID: PASSWORD SALAH ATAU MUNGKIN PASSWORD EXPIRED')</script>" . PHP_EOL;
+                        echo "<script>alert('PASSWORD INVALID: PASSWORD SALAH ATAU MUNGKIN PASSWORD EXPIRED')</script>" . PHP_EOL;
 
+                    } else {
+
+                        echo "<script>alert('INPUT INVALID: INPUT INVALID')</script>" . PHP_EOL;
+
+                    }
                 } else {
-
-                    echo "<script>alert('INPUT INVALID: INPUT INVALID')</script>" . PHP_EOL;
-
+                    echo "<script>alert('PASSWORD INVALID: PASSWORD SALAH ATAU MUNGKIN PASSWORD EXPIRED')</script>" . PHP_EOL;
                 }
 
 
             } catch(\PDOException $exception) {
 
                 echo "<script>alert('INPUT INVALID: NAMA SUDAH TERDAFTAR')</script>" . PHP_EOL;
-
-//                header("Location:/Buku-tamu/view/src/Daftar.php");
-
-//                exit();
 
             }
 

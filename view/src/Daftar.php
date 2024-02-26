@@ -6,7 +6,16 @@ require_once "../../helper/setCookie.php";
 
 session_start();
 
-if (isset($_SESSION['login']))
+if (isset($_SESSION['login'])) {
+
+    if($_COOKIE['login_state']) {
+
+        header("Location:/view/src/afterDaftar.php");
+        exit();
+
+    }
+
+}
 
 $db = getConnection();
 
