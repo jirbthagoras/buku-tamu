@@ -157,6 +157,12 @@ small {
 Prevent `sub` and `sup` elements from affecting the line height in all browsers.
 */
 
+submit {
+
+
+
+}
+
 sub,
 sup {
   font-size: 75%;
@@ -200,6 +206,47 @@ th, td {
   white-space: nowrap;
 }
 
+
+.warning {
+
+  font-size: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  text-align: center;
+
+}
+
+.rundown {
+
+  margin-top: 200px;
+
+}
+
+.map {
+
+  margin: auto;
+
+}
+
+.warning-content {
+
+  align-items: center;
+  font-size: 14px ;
+
+}
+
+.sessionCookie {
+
+  color: #7F5539;
+
+}
+
+.submit:hover {
+
+  background: #DDB892;
+
+}
 
 
 /*

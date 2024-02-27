@@ -21,7 +21,7 @@
                 class="font-jakarta font-bold text-white hover:text-gray-700">INFORMASI</a>
                 <a href="rundown.php"
                 class="font-jakarta font-bold text-white hover:text-gray-700">RUNDOWN</a>
-                <a href="Data.php"
+                <a href="data.php"
                 class="font-jakarta font-bold  text-white hover:text-gray-700">DATA</a>
             </div>
         </nav>
@@ -29,7 +29,7 @@
 </div>
 
     <div class="w-full h-screen flex items-center justify-center">
-        <div class="max-w-xs lg:max-w-lg absolute">
+        <div class="rundown max-w-xs lg:max-w-lg absolute">
 
             <div class="bg-[#DDB892] border-2 shadow-md rounded-2xl mt-[25rem] lg:mt-[30rem] px-8 mb-10 py-16">
                 <div class="mb-4">

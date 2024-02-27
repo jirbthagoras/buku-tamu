@@ -2,6 +2,6 @@
 
 function cookie($name, $value) {
 
-    setcookie($name, $value, time() + (86400 * 30));
+    setcookie($name, $value, time() + 60*60*24);
 
 }

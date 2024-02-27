@@ -21,7 +21,7 @@
                 class="font-jakarta font-bold text-white hover:text-gray-700">INFORMASI</a>
                 <a href="rundown.php"
                 class="font-jakarta font-bold text-white hover:text-gray-700">RUNDOWN</a>
-                <a href="Data.php"
+                <a href="data.php"
                 class="font-jakarta font-bold  text-white hover:text-gray-700">DATA</a>
             </div>
         </nav>
@@ -38,7 +38,7 @@
                 </H1>
                 
             </div>
-            <iframe class="mt-5  self-end lg:w-[605px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.160154335526!2d110.41738651029307!3d-6.990409368430085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b5bd8cd9251%3A0x552f32390f4f9eb4!2sSMK%20Negeri%208%20Semarang!5e0!3m2!1sen!2sid!4v1708680115389!5m2!1sen!2sid" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe class="map mt-5  self-end lg:w-[605px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.160154335526!2d110.41738651029307!3d-6.990409368430085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b5bd8cd9251%3A0x552f32390f4f9eb4!2sSMK%20Negeri%208%20Semarang!5e0!3m2!1sen!2sid!4v1708680115389!5m2!1sen!2sid" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
 </div>

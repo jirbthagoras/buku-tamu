@@ -36,7 +36,7 @@ $number = 1;
                    class="font-jakarta font-bold text-white hover:text-gray-700">INFORMASI</a>
                 <a href="rundown.php"
                    class="font-jakarta font-bold text-white hover:text-gray-700">RUNDOWN</a>
-                <a href="Data.php"
+                <a href="data.php"
                    class="font-jakarta font-bold  text-white hover:text-gray-700">DATA</a>
             </div>
         </nav>

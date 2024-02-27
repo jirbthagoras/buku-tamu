@@ -21,7 +21,7 @@
                 class="font-jakarta font-bold text-white hover:text-gray-700">INFORMASI</a>
                 <a href="rundown.php"
                 class="font-jakarta font-bold text-white hover:text-gray-700">RUNDOWN</a>
-                <a href="Data.php"
+                <a href="data.php"
                 class="font-jakarta font-bold  text-white hover:text-gray-700">DATA</a>
             </div>
         </nav>
@@ -36,8 +36,7 @@
 
             <div class="bg-[#DDB892] border-2 shadow-md rounded-2xl px-8 pt-8 pb-8">
                 <div class="mb-4">
-                    <h1 class="text-center text-white text-3xl font-extrabold font-jakarta mb-8">ANDA SUDAH DAFTAR!</h1>
-
+                    <h1 class="text-center text-white text-3xl font-extrabold font-jakarta mb-8 text-">ANDA SUDAH DAFTAR!</h1>
             </div>
         </div>
     </div>

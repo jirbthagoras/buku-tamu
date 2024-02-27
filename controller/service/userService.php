@@ -2,6 +2,7 @@
 
 namespace project\service;
 
+use PgSql\Lob;
 use project\repository\kodeRepository;
 use project\repository\userRepository;
 
@@ -21,46 +22,57 @@ class userService
         $kodeRepository = new kodeRepository();
         $result = $kodeRepository->query($password, $db);
 
-
         if ($_SERVER["REQUEST_METHOD"] == "POST")
         {
 
-            try {
+            if (isset($_POST['check'])) {
 
-                if (array_key_exists('kode', $result) && array_key_exists('usages', $result)) {
-                    if ($password == $result['kode'] && $nama != "" && $kelas != "") {
+                    try {
 
-                        $userRepository = new userRepository();
-                        $userRepository->submit($nama, $kelas, $db);
-                        $kodeRepository->minus($password, $db);
+                        if (array_key_exists('kode', $result) && array_key_exists('usages', $result)) {
+                            if ($password == $result['kode'] && $nama != "" && $kelas != "") {
 
-                        $_SESSION['login'] = true;
+                                $userRepository = new userRepository();
+                                $userRepository->submit($nama, $kelas, $db);
+                                $kodeRepository->minus($password, $db);
 
-                        cookie("login_state", $_SESSION['login']);
+                                $_SESSION['login'] = true;
 
-                        header("Location:/view/src/Data.php");
-                        exit();
+                                cookie("login_state", $_SESSION['login']);
 
-                    } elseif ($result['usages'] <= 0) {
+                                header("Location:/view/src/data.php");
+                                exit();
 
-                        echo "<script>alert('PASSWORD INVALID: PASSWORD SALAH ATAU MUNGKIN PASSWORD EXPIRED')</script>" . PHP_EOL;
+                            } elseif ($result['usages'] <= 0) {
 
-                    } else {
+                                echo "<script>alert('PASSWORD INVALID: PASSWORD SALAH ATAU MUNGKIN PASSWORD EXPIRED')</script>" . PHP_EOL;
 
-                        echo "<script>alert('INPUT INVALID: INPUT INVALID')</script>" . PHP_EOL;
+                            } else {
+
+                                echo "<script>alert('INPUT INVALID: INPUT INVALID')</script>" . PHP_EOL;
+
+                            }
+                        } else {
+                            echo "<script>alert('PASSWORD INVALID: PASSWORD SALAH ATAU MUNGKIN PASSWORD EXPIRED')</script>" . PHP_EOL;
+                        }
+                    } catch (\PDOException $exception) {
+
+                        echo "<script>alert('INPUT INVALID: NAMA SUDAH TERDAFTAR')</script>" . PHP_EOL;
 
                     }
-                } else {
-                    echo "<script>alert('PASSWORD INVALID: PASSWORD SALAH ATAU MUNGKIN PASSWORD EXPIRED')</script>" . PHP_EOL;
-                }
 
+            } else {
 
-            } catch(\PDOException $exception) {
-
-                echo "<script>alert('INPUT INVALID: NAMA SUDAH TERDAFTAR')</script>" . PHP_EOL;
+                echo "<script>alert('ANDA BELUM MENYETUJUI SESSION DAN COOKIE WEBSITE KAMI')</script>" . PHP_EOL;
 
             }
 
+
+
+
+        } else {
+
+            echo "<script>alert('INPUT INVALID: NAMA SUDAH TERDAFTAR')</script>" . PHP_EOL;
 
         }
 

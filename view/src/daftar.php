@@ -8,10 +8,14 @@ session_start();
 
 if (isset($_SESSION['login'])) {
 
-    if($_COOKIE['login_state']) {
+    if(isset($_COOKIE['login_state'])) {
 
-        header("Location:/view/src/afterDaftar.php");
-        exit();
+        if ($_COOKIE['login_state']) {
+
+            header("Location:/Buku-tamu/view/src/afterDaftar.php");
+            exit();
+
+        }
 
     }
 
@@ -53,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 class="font-jakarta font-bold text-white hover:text-gray-700">INFORMASI</a>
                 <a href="rundown.php"
                 class="font-jakarta font-bold text-white hover:text-gray-700">RUNDOWN</a>
-                <a href="Data.php"
+                <a href="data.php"
                 class="font-jakarta font-bold  text-white hover:text-gray-700">DATA</a>
             </div>
         </nav>
@@ -93,7 +97,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     class="shadow border-2 bg-gray-100 focus:bg-white focus:border-[#fbbf80] rounded-2xl w-full mb-5 py-2 px-3 text-gray-700 leading-tight focus:outline-none">
                 </div>
                 <div class="flex items-center justify-center">
-                    <input type="submit" placeholder="SUBMIT" class="w-full bg-green-600 rounded-2xl hover:bg-green-900 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline">
+                    <input type="submit" placeholder="SUBMIT" class="w-full submit bg-[#7F5539] rounded-2xl text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="warning">
+                    <span class="warning-content"><input type="checkbox" name="check">DENGAN INI ANDA MENYETUJUI <span class="sessionCookie">SESSION</span> DAN <span class="sessionCookie">COOKIE</span> YANG WEBSITE INI SEDIAKAN</span>
                 </div>
 
             </div>
